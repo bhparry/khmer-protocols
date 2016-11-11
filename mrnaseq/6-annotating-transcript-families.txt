@@ -64,8 +64,8 @@ Now, grab the latest mouse RefSeq::
 
 Format both as BLAST databases::
 
-   formatdb -i mouse.protein.faa -o T -p T
-   formatdb -i trinity-nematostella.renamed.fa -o T -p F
+   makeblastdb -in mouse.protein.faa -parse_seqids -dbtype prot
+   makeblastdb -in trinity-nematostella.renamed.fa -parse_seqids -dbtype nucl
 
 And, now, if you haven't downloaded the canned BLAST data above, run
 BLAST in both directions.  Note, this may take ~24 hours or longer;
